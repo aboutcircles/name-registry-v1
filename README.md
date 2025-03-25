@@ -73,7 +73,7 @@ Additionally, the contract designates a "seeder" address that:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-org/name-registry-v1.git
+   git clone https://github.com/aboutcircles/name-registry-v1.git
    cd name-registry-v1
    ```
 
