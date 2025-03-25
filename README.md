@@ -10,9 +10,10 @@ A simple registry contract for mapping [Hub V1](https://github.com/CirclesUBI/ci
 3. [Contract Architecture](#contract-architecture)
 4. [Installation](#installation)
 5. [Usage](#usage)
-6. [Testing](#testing)
-7. [Security Considerations](#security-considerations)
-8. [License](#license)
+6. [Deployment](#deployment)
+7. [Testing](#testing)
+8. [Security Considerations](#security-considerations)
+9. [License](#license)
 
 ---
 
@@ -89,7 +90,7 @@ Additionally, the contract designates a "seeder" address that:
    - The address of the initial seeder.   
    
    ```bash
-   forge script script/DeployNameRegistryV1.s.sol:DeployNameRegistryV1 --rpc-url gnosis
+   forge script script/DeployNameRegistryV1.s.sol:DeployNameRegistryV1Script -vvvv --rpc-url gnosis --etherscan-api-key <YOUR-API-KEY> --verify --account name_deployer --broadcast
    ```
 2. **Update Single Metadata**
     Once deployed, any recognized Hub V1 user can update their own metadata:
@@ -108,6 +109,12 @@ Additionally, the contract designates a "seeder" address that:
     ```solidity
     nameRegistry.renounceSeederRole();
     ```
+
+## Deployment
+   Deployed on **Gnosis chain**:
+   NameRegistryV1 at the address ```0x1eaD7F904F6fFC619c58B85e04F890b394E08172```.
+   Hub v1 at the address         ```0x29b9a7fBb8995b2423a71cC17cf9810798F6C543```.
+   Seeder at the address         ```0x70105cC9346b8BaB7a2038a586A6d877384d35c4```.
 
 ## Testing
 
